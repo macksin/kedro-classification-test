@@ -32,3 +32,13 @@ srf_results_test:
 srf_results_train:
   type: json.JSONDataSet
   filepath: data/08_reporting/srf_results_train.json
+
+
+model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/model.pkl
+
+
+scored_test:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/scored_test.csv

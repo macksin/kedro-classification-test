@@ -38,7 +38,16 @@ model:
   type: pickle.PickleDataSet
   filepath: data/06_models/model.pkl
 
+catboost.model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/catboost.model.pkl
+
 
 scored_test:
   type: pandas.CSVDataSet
   filepath: data/07_model_output/scored_test.csv
+
+
+catboost.scored_test:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/catboost.scored_test.csv

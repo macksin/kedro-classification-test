@@ -9,6 +9,8 @@ from logging import getLogger
 from numpy import mean, std
 from typing import Dict, List
 
+from catboost import CatBoostClassifier, Pool
+
 
 def random_forest_model(
     train_x: DataFrame, train_y: Series, cv_splits: int
@@ -34,3 +36,18 @@ def random_forest_model(
         'roc_auc': mean(cv_scores),
         'std(roc_auc)': std(cv_scores)
     }
+
+
+def catboostc(
+    train_x: DataFrame, train_y: Series
+):
+
+    model = CatBoostClassifier(iterations=150,
+                               depth=10,
+                               learning_rate=1,
+                               loss_function='Logloss',
+                               verbose=False)
+    # train the model
+    model.fit(train_x, train_y)
+
+    return model

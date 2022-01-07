@@ -15,3 +15,14 @@ def create_pipeline(**kwargs):
             outputs="scored_test"
         )
     ])
+
+
+
+def create_pipeline_cat(**kwargs):
+    return Pipeline([
+        node(
+            score,
+            inputs=["X_test", "catboost.model", "y_test"],
+            outputs="catboost.scored_test"
+        )
+    ])

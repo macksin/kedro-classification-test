@@ -21,6 +21,8 @@ def register_pipelines() -> Dict[str, Pipeline]:
     model_simple_rf_pipeline = srf.create_pipeline()
     performance_pipeline = pf.create_pipeline_srf()
     scoring_pipeline = sc.create_pipeline()
+    cat_train = srf.create_pipeline_catboost()
+    cat_score = sc.create_pipeline_cat()
 
     return {
         "__default__": Pipeline([
@@ -28,7 +30,9 @@ def register_pipelines() -> Dict[str, Pipeline]:
             create_testing_pipeline +\
             model_simple_rf_pipeline +\
             performance_pipeline +\
-            scoring_pipeline
+            scoring_pipeline +\
+            cat_train +\
+            cat_score
         ]),
         "Create Dataset": create_dataset_pipeline,
         "Create Testing": create_testing_pipeline,

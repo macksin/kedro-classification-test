@@ -11,7 +11,7 @@ from logging import getLogger
 def create_dataset(random_state: int) -> DataFrame:
     """Make inbalanced classification dataset."""
     args = dict(
-        n_samples=7_000,
+        n_samples=15_000,
         n_features=50,
         n_informative=10, 
         n_redundant=10, 

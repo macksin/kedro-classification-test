@@ -17,7 +17,7 @@ def create_dataset(random_state: int) -> DataFrame:
         n_redundant=10, 
         n_repeated=5, 
         n_classes=2, 
-        n_clusters_per_class=2,
+        n_clusters_per_class=6,
         weights=(0.85,),
         random_state=random_state
     )

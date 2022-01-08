@@ -1,8 +1,8 @@
 ##########################
 # KEDRO PROJECT
-.mlruns/
+mlruns/
 
-.catboost_info/
+catboost_info/
 
 # ignorar pasta do mlflow
 

@@ -7,6 +7,9 @@ catboost_info/catboost_training.json
 catboost_info/learn/events.out.tfevents
 catboost_info/time_left.tsv
 
+.vscode/
+.ipython/profile_default
+
 # ignorar pasta do mlflow
 
 # ignore all local configuration

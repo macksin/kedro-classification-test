@@ -11,5 +11,13 @@ def create_pipeline_srf(**kwargs):
         node(
             performance, 
             inputs=["X_test", "y_test", "model"], 
-            outputs="srf_results_test")
+            outputs="my_model_metrics")
+    ])
+
+def create_pipeline_cat(**kwargs):
+    return Pipeline([
+        node(
+            performance, 
+            inputs=["X_test", "y_test", "catboost.model"], 
+            outputs="my_model_metrics")
     ])

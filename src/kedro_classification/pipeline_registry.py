@@ -23,6 +23,7 @@ def register_pipelines() -> Dict[str, Pipeline]:
     scoring_pipeline = sc.create_pipeline()
     cat_train = srf.create_pipeline_catboost()
     cat_score = sc.create_pipeline_cat()
+    performance_pipeline_catboost = pf.create_pipeline_cat()
 
     return {
         "__default__": Pipeline([
@@ -30,9 +31,21 @@ def register_pipelines() -> Dict[str, Pipeline]:
             create_testing_pipeline +\
             model_simple_rf_pipeline +\
             performance_pipeline +\
-            scoring_pipeline +\
+            scoring_pipeline
+        ]),
+        "Catboost": Pipeline([
+            create_dataset_pipeline +\
+            create_testing_pipeline +\
+            performance_pipeline_catboost +\
             cat_train +\
-            cat_score
+            cat_score   
+        ]),
+        "RandomForest": Pipeline([
+            create_dataset_pipeline +\
+            create_testing_pipeline +\
+            model_simple_rf_pipeline +\
+            performance_pipeline +\
+            scoring_pipeline
         ]),
         "Create Dataset": create_dataset_pipeline,
         "Create Testing": create_testing_pipeline,

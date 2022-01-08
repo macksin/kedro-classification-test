@@ -3,6 +3,12 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
 
+# MLflow
+my_model_metrics:
+    type: kedro_mlflow.io.metrics.MlflowMetricsDataSet
+    prefix: metric
+
+
 raw_data:
   type: pandas.FeatherDataSet
   filepath: data/01_raw/raw.feather

@@ -16,7 +16,7 @@ def random_forest_model(
     train_x: DataFrame, train_y: Series, cv_splits: int
 ):
     """Modelo simples Random Forest"""
-    model = RandomForestClassifier()
+    model = RandomForestClassifier(max_depth=3)
 
     cv_scores = cross_val_score(
         model, 

@@ -8,6 +8,10 @@ aiofiles==0.6.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   kedro-viz
+alembic==1.4.1
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 anyconfig==0.10.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -92,11 +96,18 @@ click==7.1.2
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   black
     #   cookiecutter
+    #   databricks-cli
+    #   flask
     #   kedro
     #   kedro-telemetry
+    #   mlflow
     #   pip-tools
     #   strawberry-graphql
     #   uvicorn
+cloudpickle==2.0.0
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 cookiecutter==1.7.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -109,6 +120,10 @@ cycler==0.11.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   matplotlib
+databricks-cli==0.16.2
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 debugpy==1.5.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -121,6 +136,10 @@ defusedxml==0.7.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   nbconvert
+docker==5.0.3
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 dynaconf==3.1.7
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -129,6 +148,7 @@ entrypoints==0.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   jupyterlab-server
+    #   mlflow
     #   nbconvert
 et-xmlfile==1.1.0
     # via
@@ -140,6 +160,11 @@ fastapi==0.66.1
     #   kedro-viz
 flake8==4.0.1
     # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+flask==2.0.2
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
+    #   prometheus-flask-exporter
 fonttools==4.28.5
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -156,6 +181,7 @@ gitpython==3.1.24
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   kedro
+    #   mlflow
 graphql-core==3.1.7
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -168,6 +194,10 @@ greenlet==1.1.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   sqlalchemy
+gunicorn==20.1.0
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 h11==0.12.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -188,6 +218,7 @@ importlib-metadata==4.2.0
     #   flake8
     #   ipykernel
     #   jsonschema
+    #   mlflow
     #   pep517
     #   pluggy
     #   pytest
@@ -230,6 +261,10 @@ ipywidgets==7.6.5
     #   jupyter
 isort==5.10.1
     # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+itsdangerous==2.0.1
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   flask
 jedi==0.18.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -238,6 +273,7 @@ jinja2==3.0.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   cookiecutter
+    #   flask
     #   jinja2-time
     #   jupyter-server
     #   jupyterlab
@@ -314,8 +350,11 @@ jupyterlab-widgets==1.0.2
 kedro==0.17.6
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   kedro-mlflow
     #   kedro-telemetry
     #   kedro-viz
+kedro-mlflow==0.8.0
+    # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
 kedro-telemetry==0.1.3
     # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
 kedro-viz==4.2.0
@@ -324,10 +363,15 @@ kiwisolver==1.3.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   matplotlib
+mako==1.1.6
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   alembic
 markupsafe==2.0.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   jinja2
+    #   mako
 matplotlib==3.5.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -345,6 +389,10 @@ mistune==0.8.4
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   nbconvert
+mlflow==1.22.0
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   kedro-mlflow
 mypy-extensions==0.4.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -394,6 +442,7 @@ numpy==1.21.5
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   catboost
     #   matplotlib
+    #   mlflow
     #   pandas
     #   pyarrow
     #   scikit-learn
@@ -407,6 +456,7 @@ packaging==21.3
     #   jupyterlab
     #   jupyterlab-server
     #   matplotlib
+    #   mlflow
     #   pytest
     #   qtpy
 pandas==1.3.5
@@ -414,6 +464,7 @@ pandas==1.3.5
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   catboost
     #   kedro-viz
+    #   mlflow
 pandocfilters==1.5.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -465,11 +516,20 @@ prometheus-client==0.12.0
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   jupyter-server
     #   notebook
+    #   prometheus-flask-exporter
+prometheus-flask-exporter==0.18.7
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 prompt-toolkit==3.0.24
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   ipython
     #   jupyter-console
+protobuf==3.19.1
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 ptyprocess==0.7.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -494,6 +554,7 @@ pydantic==1.8.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   fastapi
+    #   kedro-mlflow
 pyflakes==2.4.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -528,6 +589,7 @@ pytest-mock==1.13.0
 python-dateutil==2.8.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   alembic
     #   arrow
     #   jupyter-client
     #   matplotlib
@@ -537,6 +599,10 @@ python-dotenv==0.19.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   uvicorn
+python-editor==1.0.4
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   alembic
 python-json-logger==2.0.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -553,12 +619,14 @@ pytz==2021.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   babel
+    #   mlflow
     #   pandas
 pyyaml==5.4.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   kedro
     #   kedro-telemetry
+    #   mlflow
     #   uvicorn
 pyzmq==22.3.0
     # via
@@ -575,6 +643,10 @@ qtpy==2.0.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   qtconsole
+querystring-parser==1.2.4
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 regex==2021.11.10
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -583,8 +655,11 @@ requests==2.25.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   cookiecutter
+    #   databricks-cli
+    #   docker
     #   jupyterlab-server
     #   kedro-telemetry
+    #   mlflow
 rope==0.21.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -615,9 +690,11 @@ six==1.16.0
     #   bleach
     #   catboost
     #   cookiecutter
+    #   databricks-cli
     #   plotly
     #   python-dateutil
     #   python-multipart
+    #   querystring-parser
 smmap==5.0.0
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -629,7 +706,13 @@ sniffio==1.2.0
 sqlalchemy==1.4.29
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   alembic
     #   kedro-viz
+    #   mlflow
+sqlparse==0.4.2
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   mlflow
 starlette==0.14.2
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -638,6 +721,10 @@ strawberry-graphql==0.87.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   kedro-viz
+tabulate==0.8.9
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   databricks-cli
 tenacity==8.0.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
@@ -744,11 +831,16 @@ webencodings==0.5.1
 websocket-client==1.2.3
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   docker
     #   jupyter-server
 websockets==8.1
     # via
     #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
     #   uvicorn
+werkzeug==2.0.2
+    # via
+    #   -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
+    #   flask
 wheel==0.36.2
     # via pip-tools
 widgetsnbextension==3.5.2

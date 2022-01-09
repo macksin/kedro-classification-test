@@ -8,6 +8,9 @@ from pandas import DataFrame, Series
 from logging import getLogger
 from numpy import mean, std
 from typing import Dict, List
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
 
 from catboost import CatBoostClassifier, Pool
 
@@ -49,5 +52,26 @@ def catboostc(
                                verbose=False)
     # train the model
     model.fit(train_x, train_y)
+
+    return model
+
+
+def different_models(
+    train_x: DataFrame, train_y: Series, model_name: str
+):
+
+    if model_name == "Linear":
+        model = LogisticRegression()
+    elif model_name == "SVM":
+        model = SVC(probability=True)
+    elif model_name == "Naive":
+        model = GaussianNB()
+
+    # train the model
+    model.fit(train_x, train_y)
+
+    # results
+    log = getLogger(__name__)
+    log.info("CARAIO")
 
     return model

@@ -2,6 +2,10 @@ random_state: 42
 test_size: 0.25
 cv_splits: 10
 
+linear: Linear
+svm: SVM
+naive: Naive
+
 target: target
 features: 
   - col_0

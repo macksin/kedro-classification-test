@@ -56,3 +56,11 @@ def create_pipeline_naive(**kwargs):
         outputs="my_model_metrics",
         namespace="naive"
     )
+
+def create_pipeline_linear_pca(**kwargs):
+    return pipeline(
+        performance_models_pipeline,
+        inputs={"X_test": "pca.X_test", "y_test": "y_test"},
+        outputs="my_model_metrics",
+        namespace="linear"
+    )

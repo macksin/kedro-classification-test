@@ -3,26 +3,28 @@ This is a boilerplate pipeline 'performance'
 generated using Kedro 0.17.6
 """
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, roc_auc_score
+from sklearn.metrics import f1_score, roc_auc_score
 from pandas import DataFrame, Series
 from logging import getLogger
 from typing import Dict, Union, List
 
-from kedro_mlflow.io.metrics import MlflowMetricDataSet
 
 def performance(
     test_x: DataFrame, test_y: Series, model: RandomForestClassifier
 ):
     """Modelo simples Random Forest"""
     y_proba = model.predict_proba(test_x)[:, 1]
-    # y_pred = model.predict(test_x)
-    # sc = classification_report(test_y, y_pred)
+    y_pred = model.predict(test_x)
     sc = roc_auc_score(test_y, y_proba)
+
+    # f1 score
+    f1 = f1_score(test_y, y_pred)
 
     # log
     log = getLogger(__name__)
-    log.info("\n\tTESTING ROC_AUC: %.4f" % sc)
+    log.info("Testing roc_auc: %.4f" % sc)
 
     return {
         "roc_auc": {"value": float(sc), "step": 1},
+        "f1_score": {"value": float(f1), "step": 1}
     }

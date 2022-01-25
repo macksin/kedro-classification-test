@@ -7,6 +7,7 @@ from kedro_classification.pipelines import test_splitter as ts
 from kedro_classification.pipelines import simple_random_forest as srf
 from kedro_classification.pipelines import performance as pf
 from kedro_classification.pipelines import scoring as sc
+from kedro_classification.pipelines import pca as pca
 
 
 def register_pipelines() -> Dict[str, Pipeline]:
@@ -28,10 +29,16 @@ def register_pipelines() -> Dict[str, Pipeline]:
     model_linear_pipe = srf.create_pipeline_linear()
     model_svm_pipe = srf.create_pipeline_svm()
     model_naive_pipe = srf.create_pipeline_naive()
+    model_linear_pca_pipe = srf.create_pipeline_linear_pca()
 
     perf_linear_pipe = pf.create_pipeline_linear()
     perf_svm_pipe = pf.create_pipeline_svm()
     perf_naive_pipe = pf.create_pipeline_naive()
+    perf_linear_pca_pipe = pf.create_pipeline_linear_pca()
+
+    pca_train_pipe = pca.create_pipeline_train()
+    pca_use_pipe = pca.create_pipeline_use()
+    pca_use_test_pipe = pca.create_pipeline_use_test()
 
     return {
         "__default__": Pipeline([
@@ -55,6 +62,17 @@ def register_pipelines() -> Dict[str, Pipeline]:
             model_linear_pipe +\
             perf_linear_pipe +\
             scoring_pipeline
+        ]),
+
+        "Linear_PCA": Pipeline([
+            create_dataset_pipeline +\
+            create_testing_pipeline +\
+            pca_train_pipe +\
+            pca_use_pipe +\
+            pca_use_test_pipe +\
+            model_linear_pca_pipe +\
+
+            perf_linear_pca_pipe
         ]),
 
         "SVM": Pipeline([

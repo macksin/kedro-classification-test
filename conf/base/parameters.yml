@@ -6,6 +6,8 @@ linear: Linear
 svm: SVM
 naive: Naive
 
+n_components: 10
+
 target: target
 features: 
   - col_0

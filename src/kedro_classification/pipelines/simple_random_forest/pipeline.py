@@ -27,7 +27,8 @@ various_models_pipeline = Pipeline([
     node(
         different_models,
         inputs=["X_train", "y_train", "params:linear"],
-        outputs="model"
+        outputs="model",
+        name="treinando_modelo"
     )
 ])
 
@@ -53,4 +54,13 @@ def create_pipeline_naive(**kwargs):
                 inputs=["X_train", "y_train"],
                 namespace='naive',
                 parameters={"params:linear":"params:naive"}
+        )
+
+def create_pipeline_linear_pca(**kwargs):
+    return pipeline(
+                various_models_pipeline,
+                #inputs=["pca.X_train", "y_train"],
+                inputs= {"X_train": "pca.X_train", "y_train": 'y_train'},
+                namespace='linear',
+                parameters={"params:linear":"params:linear"}
         )

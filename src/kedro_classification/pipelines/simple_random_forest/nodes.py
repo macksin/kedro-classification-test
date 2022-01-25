@@ -19,7 +19,7 @@ def random_forest_model(
     train_x: DataFrame, train_y: Series, cv_splits: int
 ):
     """Modelo simples Random Forest"""
-    model = RandomForestClassifier(max_depth=3)
+    model = RandomForestClassifier(max_depth=4, n_estimators=150)
 
     cv_scores = cross_val_score(
         model, 
@@ -72,6 +72,6 @@ def different_models(
 
     # results
     log = getLogger(__name__)
-    log.info("CARAIO")
+    log.info("Ok")
 
     return model

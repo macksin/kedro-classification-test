@@ -355,7 +355,6 @@ kedro==0.17.6
     #   kedro-viz
 kedro-mlflow==0.8.0
     # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
-kedro-telemetry==0.1.3
     # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in
 kedro-viz==4.2.0
     # via -r /home/mashcon/Documents/Kedro/kedro-classification/src/requirements.in

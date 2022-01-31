@@ -1,6 +1,6 @@
 """
-This is a boilerplate pipeline 'conformity'
-generated using Kedro 0.17.6
+In this node we will score a conformal predictor and return a dataframe with
+the non-conformity score cuttoff (depends on a cutoff therm `alpha`).
 """
 
 import numpy as np
@@ -47,7 +47,7 @@ class InductiveConformalPredictor():
                 calibration_filt = self.calibration_score[self.calibration_class == c]
                 calib = calibration_filt[:, c]
             else:
-                calib = self.calibration_score[range(len(self.calibration_class)), 
+                calib = self.calibration_score[range(len(self.calibration_class)),
                                                           self.calibration_class]
 
             sorted_calib = np.sort(calib)
@@ -85,6 +85,6 @@ def return_conformity_scores(
 
     data = data.copy()
 
-    data['y_test_conf'] = y_test_conf 
-    
+    data['y_test_conf'] = y_test_conf
+
     return data

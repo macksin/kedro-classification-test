@@ -1,6 +1,5 @@
 """
-This is a boilerplate pipeline 'performance'
-generated using Kedro 0.17.6
+Performance node where we will develop all the performance functions.
 """
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, roc_auc_score
@@ -12,7 +11,9 @@ from typing import Dict, Union, List
 def performance(
     test_x: DataFrame, test_y: Series, model: RandomForestClassifier
 ):
-    """Modelo simples Random Forest"""
+    """Measure the test data with the metrics:
+        - F1 Score
+        - AUROC"""
     y_proba = model.predict_proba(test_x)[:, 1]
     y_pred = model.predict(test_x)
     sc = roc_auc_score(test_y, y_proba)

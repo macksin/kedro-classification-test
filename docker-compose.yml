@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  data_science_docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dsdocker
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/home/kedro 
+    network_mode: host

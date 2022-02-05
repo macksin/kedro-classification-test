@@ -1,4 +1,12 @@
 ##########################
+
+.vscode-server/
+.local/
+.gnupg/
+.bash_history/
+.ssh/
+Not
+
 # KEDRO PROJECT
 mlruns/*
 
@@ -168,3 +176,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dockerignore

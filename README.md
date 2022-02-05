@@ -1,4 +1,30 @@
-# Kedro Classification
+# How to install
+
+It is necessary to have docker and docker-compose. First we give permission to all current folder inside this project:
+
+```bash
+chmod -R 777 .
+```
+
+Then, we build the image.
+
+```bash
+docer-compose up -d
+```
+
+Using `docker ps` verify the container is running, the current folder is attached. It is recommended the use of VSCode with `Docker` and `Remote - Containers` both from microsoft, right clicking the running image will show the option `attach VSCode`.
+
+## Kedro
+
+You should put all the new libraries in the `src/requirements.in` and compile the `src/requirements.txt` with the command:
+
+```bash
+kedro build-reqs
+```
+
+After this you can safely install `pip install -r src/requirements.txt` without any conflicts.
+
+# kedro_classification_test
 
 ## Overview
 

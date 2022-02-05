@@ -1,6 +1,6 @@
 [tool.kedro]
-package_name = "kedro_classification"
-project_name = "Kedro Classification"
+package_name = "kedro_classification_test"
+project_name = "kedro_classification_test"
 project_version = "0.17.6"
 
 [tool.isort]
@@ -14,7 +14,7 @@ known_third_party = "kedro"
 [tool.pytest.ini_options]
 addopts = """
 --cov-report term-missing \
---cov src/kedro_classification -ra"""
+--cov src/kedro_classification_test -ra"""
 
 [tool.coverage.report]
 fail_under = 0

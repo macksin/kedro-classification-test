@@ -1,8 +1,8 @@
-.. kedro_classification documentation master file, created by sphinx-quickstart.
+.. kedro_classification_test documentation master file, created by sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to project kedro_classification's API docs!
+Welcome to project kedro_classification_test's API docs!
 =============================================
 
 .. toctree::

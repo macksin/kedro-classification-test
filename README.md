@@ -1,4 +1,26 @@
-# Kedro Classification
+# How to install
+
+For the development process **inside** the container you will need to match your uid and gid to the uid and gid of the user kedro inside the container, inside `docker-compose.yml` there is already a solution for that.
+
+Build the image.
+
+```bash
+docer-compose up -d
+```
+
+Using `docker ps` verify the container is running, the current folder is attached. It is recommended the use of VSCode with `Docker` and `Remote - Containers` both from microsoft, right clicking the running image will show the option `attach VSCode`.
+
+## Kedro
+
+You should put all the new libraries in the `src/requirements.in` and compile the `src/requirements.txt` with the command:
+
+```bash
+kedro build-reqs
+```
+
+After this you can safely install `pip install -r src/requirements.txt` without any conflicts.
+
+# kedro_classification_test
 
 ## Overview
 

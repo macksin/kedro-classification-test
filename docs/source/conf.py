@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-# kedro_classification documentation build
+# kedro_classification_test documentation build
 # configuration file, created by sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its
@@ -22,11 +22,11 @@ import re
 from kedro.framework.cli.utils import find_stylesheets
 from recommonmark.transform import AutoStructify
 
-from kedro_classification import __version__ as release
+from kedro_classification_test import __version__ as release
 
 # -- Project information -----------------------------------------------------
 
-project = "kedro_classification"
+project = "kedro_classification_test"
 author = "QuantumBlack"
 
 # The short X.Y version.
@@ -120,7 +120,7 @@ html_show_sourcelink = False
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "kedro_classificationdoc"
+htmlhelp_basename = "kedro_classification_testdoc"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -148,8 +148,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "kedro_classification.tex",
-        "kedro_classification Documentation",
+        "kedro_classification_test.tex",
+        "kedro_classification_test Documentation",
         "QuantumBlack",
         "manual",
     )
@@ -162,8 +162,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "kedro_classification",
-        "kedro_classification Documentation",
+        "kedro_classification_test",
+        "kedro_classification_test Documentation",
         [author],
         1,
     )
@@ -177,11 +177,11 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "kedro_classification",
-        "kedro_classification Documentation",
+        "kedro_classification_test",
+        "kedro_classification_test Documentation",
         author,
-        "kedro_classification",
-        "Project kedro_classification codebase.",
+        "kedro_classification_test",
+        "Project kedro_classification_test codebase.",
         "Data-Science",
     )
 ]

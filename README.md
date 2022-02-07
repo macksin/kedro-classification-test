@@ -5,7 +5,7 @@ For the development process **inside** the container you will need to match your
 Build the image.
 
 ```bash
-docer-compose up -d
+docker-compose up -d
 ```
 
 Using `docker ps` verify the container is running, the current folder is attached. It is recommended the use of VSCode with `Docker` and `Remote - Containers` both from microsoft, right clicking the running image will show the option `attach VSCode`.

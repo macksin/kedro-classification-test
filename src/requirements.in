@@ -15,3 +15,5 @@ scikit-learn
 matplotlib
 scipy
 numpy
+pandas
+pyarrow

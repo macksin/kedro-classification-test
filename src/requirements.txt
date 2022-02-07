@@ -232,6 +232,8 @@ numpy==1.19.5
     # via
     #   -r /home/kedro/src/requirements.in
     #   matplotlib
+    #   pandas
+    #   pyarrow
     #   scikit-learn
     #   scipy
 packaging==21.3
@@ -241,6 +243,8 @@ packaging==21.3
     #   jupyterlab-server
     #   pytest
     #   qtpy
+pandas==1.1.5
+    # via -r /home/kedro/src/requirements.in
 pandocfilters==1.5.0
     # via nbconvert
 parso==0.7.1
@@ -277,6 +281,8 @@ ptyprocess==0.7.0
     #   terminado
 py==1.11.0
     # via pytest
+pyarrow==6.0.1
+    # via -r /home/kedro/src/requirements.in
 pycodestyle==2.7.0
     # via flake8
 pycparser==2.21
@@ -310,12 +316,15 @@ python-dateutil==2.8.2
     #   arrow
     #   jupyter-client
     #   matplotlib
+    #   pandas
 python-json-logger==2.0.2
     # via kedro
 python-slugify==5.0.2
     # via cookiecutter
 pytz==2021.3
-    # via babel
+    # via
+    #   babel
+    #   pandas
 pyyaml==5.4.1
     # via kedro
 pyzmq==22.3.0

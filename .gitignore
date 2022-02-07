@@ -5,6 +5,7 @@
 .gnupg/
 .bash_history/
 .ssh/
+.bash_history
 Not
 
 # KEDRO PROJECT

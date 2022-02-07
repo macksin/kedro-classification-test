@@ -2,4 +2,4 @@
 	email = mack.heyha@gmail.com
 	name = mashcon
 [credential]
-	helper = "!f() { /home/kedro/.vscode-server/bin/5554b12acf27056905806867f251c859323ff7e9/node /tmp/vscode-remote-containers-e39f49cb9bd297cf664b188ed83e18e17b2175ef.js $*; }; f"
+	helper = "!f() { /home/kedro/.vscode-server/bin/5554b12acf27056905806867f251c859323ff7e9/node /tmp/vscode-remote-containers-9f54caa599b7b34af7da56d2efc719dbe967b492.js $*; }; f"

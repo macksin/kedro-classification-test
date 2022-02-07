@@ -1,12 +1,8 @@
 # How to install
 
-It is necessary to have docker and docker-compose. First we give permission to all current folder inside this project:
+For the development process **inside** the container you will need to match your uid and gid to the uid and gid of the user kedro inside the container, inside `docker-compose.yml` there is already a solution for that.
 
-```bash
-chmod -R 777 .
-```
-
-Then, we build the image.
+Build the image.
 
 ```bash
 docer-compose up -d

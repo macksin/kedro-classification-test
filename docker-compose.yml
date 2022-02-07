@@ -5,9 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - KEDRO_UID=1000 # --build-arg USER_ID=$(id -u) \
+        - KEDRO_GID=1000 # --build-arg GROUP_ID=$(id -g) .
     container_name: dsdocker
     tty: true
     stdin_open: true
     volumes:
-      - .:/home/kedro 
+      - .:/home/kedro:shared,z
     network_mode: host

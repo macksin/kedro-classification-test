@@ -35,3 +35,15 @@ ls
 clear
 ls
 exit
+ls
+ls -lh
+cd Test2 
+ls
+vim Test2 
+exit
+ls
+whoami 
+id -u
+id -v
+id -g
+exit

@@ -8,6 +8,7 @@ from kedro_classification_test.pipelines import simple_random_forest as srf
 from kedro_classification_test.pipelines import performance as pf
 from kedro_classification_test.pipelines import scoring as sc
 from kedro_classification_test.pipelines import pca as pca
+from kedro_classification_test.pipelines import learning_curves as lc
 
 def register_pipelines() -> Dict[str, Pipeline]:
     """Register the project's pipelines.
@@ -36,6 +37,8 @@ def register_pipelines() -> Dict[str, Pipeline]:
     pca_use_pipe = pca.create_pipeline_use()
     pca_use_test_pipe = pca.create_pipeline_use_test()
 
+    learning_curves_pipe = lc.create_pipeline()
+
     return {
         "__default__": Pipeline([
             create_dataset_pipeline +\
@@ -43,6 +46,12 @@ def register_pipelines() -> Dict[str, Pipeline]:
             model_simple_rf_pipeline +\
             performance_pipeline +\
             scoring_pipeline
+        ]),
+
+        "quality": Pipeline([
+            create_dataset_pipeline +\
+            create_testing_pipeline +\
+            learning_curves_pipe
         ]),
 
         "Linear": Pipeline([

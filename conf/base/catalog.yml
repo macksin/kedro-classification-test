@@ -8,6 +8,9 @@
 #     type: kedro_mlflow.io.metrics.MlflowMetricsDataSet
 #     prefix: metrics
 
+learning_curve:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/learning_curve.png
 
 raw_data:
   type: pandas.FeatherDataSet

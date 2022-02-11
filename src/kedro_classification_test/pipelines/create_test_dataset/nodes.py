@@ -11,14 +11,14 @@ from logging import getLogger
 def create_dataset(random_state: int) -> DataFrame:
     """Make inbalanced classification dataset."""
     args = dict(
-        n_samples=15_000,
+        n_samples=1000,
         n_features=50,
         n_informative=10, 
         n_redundant=10, 
         n_repeated=5, 
         n_classes=2, 
         n_clusters_per_class=6,
-        weights=(0.85,),
+        weights=(0.70,),
         random_state=random_state
     )
 

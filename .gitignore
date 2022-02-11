@@ -8,6 +8,10 @@
 .bash_history
 Not
 .cookiecutter_replay
+.config
+.ipython
+.jupyter
+.gitconfig
 
 # KEDRO PROJECT
 mlruns/*

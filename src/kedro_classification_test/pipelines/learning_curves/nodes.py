@@ -13,6 +13,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from my_ml_utils.perceptron import Perceptron
 
 import os
 
@@ -131,9 +132,9 @@ def learning_curves(x, y, ylim=None, random_state=None, savefig=True, pic_name='
         random_state = np.random.RandomState(42)
 
     if ylim == None:
-        ylim = (0.6, 1.01)
+        ylim = (0.4, 1.01)
 
-    fig, axes = plt.subplots(2, 6, figsize=(25, 10))
+    fig, axes = plt.subplots(2, 7, figsize=(30, 10))
 
     title = "Naive Bayes"
     # Cross validation with 100 iterations to get smoother mean test and train
@@ -168,6 +169,12 @@ def learning_curves(x, y, ylim=None, random_state=None, savefig=True, pic_name='
     title = r"Logistic, Default (Not Scaled)"
     estimator = LogisticRegression(max_iter=1000)
     plot_learning_curve(estimator, title, x, y, axes=axes[:, 5],  ylim=ylim,
+                        cv=cv, n_jobs=4)
+
+
+    title = r"Perceptron (custom made)"
+    estimator = Perceptron()
+    plot_learning_curve(estimator, title, x.values, y, axes=axes[:, 6],  ylim=ylim,
                         cv=cv, n_jobs=4)
 
     plt.tight_layout()
